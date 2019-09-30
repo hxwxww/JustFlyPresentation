@@ -14,7 +14,7 @@ Pod::Spec.new do |s|
 
   s.source        = { :git => "https://github.com/hxwxww/JustFlyPresentation.git", :tag => "#{s.version}" }
 
-  s.source_files  = "Classes", "JustFlyPresentation/JustFlyJustFlyPresentation/**/*.{h,m,swift}"
+  s.source_files  = "Classes", "JustFlyPresentation/JustFlyPresentation/**/*.{h,m,swift}"
 
   s.frameworks = "UIKit", "Foundation"
   

@@ -9,7 +9,13 @@
 
 - 基于UIPresentationController的封装，支持多种转场效果，还可轻松自定义转场动画
 
+- CocoaPods:
+```
+    pod 'JustFlyPresentation'
+```
+
 - 使用方法：
+
 需要present的ViewController遵守PresentedViewType协议即可：
 ```
 class AlertViewController: UIViewController, PresentedViewType {
