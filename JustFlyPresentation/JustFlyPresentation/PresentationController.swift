@@ -47,7 +47,7 @@ public final class PresentationController: UIPresentationController {
     // MARK: -  override
     
     public override init(presentedViewController: UIViewController, presenting presentingViewController: UIViewController?) {
-        component = (presentedViewController as? PresentedViewType)?.component ?? PresentedViewComponent(contentSize: CGSize(width: 240, height: 200))
+        component = (presentedViewController as? PresentedViewType)?.presentedViewComponent ?? PresentedViewComponent(contentSize: CGSize(width: 240, height: 200))
         super.init(presentedViewController: presentedViewController, presenting: presentingViewController)
     }
     

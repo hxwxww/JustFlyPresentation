@@ -11,15 +11,15 @@ import JustFlyPresentation
 
 class InputViewController: UIViewController, PresentedViewType, UITextFieldDelegate, UITextViewDelegate {
     
-    var component: PresentedViewComponent
+    var presentedViewComponent: PresentedViewComponent
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
-        component = PresentedViewComponent(contentSize: CGSize(width: 300, height: 300))
+        presentedViewComponent = PresentedViewComponent(contentSize: CGSize(width: 300, height: 300))
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
     }
     
     required init?(coder aDecoder: NSCoder) {
-        component = PresentedViewComponent(contentSize: CGSize(width: 300, height: 300))
+        presentedViewComponent = PresentedViewComponent(contentSize: CGSize(width: 300, height: 300))
         super.init(coder: aDecoder)
     }
     

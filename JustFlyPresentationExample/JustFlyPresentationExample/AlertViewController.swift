@@ -11,15 +11,15 @@ import JustFlyPresentation
 
 class AlertViewController: UIViewController, PresentedViewType {
     
-    var component: PresentedViewComponent
+    var presentedViewComponent: PresentedViewComponent
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
-        component = PresentedViewComponent(contentSize: CGSize(width: 260, height: 240))
+        presentedViewComponent = PresentedViewComponent(contentSize: CGSize(width: 260, height: 240))
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
     }
     
     required init?(coder aDecoder: NSCoder) {
-        component = PresentedViewComponent(contentSize: CGSize(width: 260, height: 240))
+        presentedViewComponent = PresentedViewComponent(contentSize: CGSize(width: 260, height: 240))
         super.init(coder: aDecoder)
     }
     

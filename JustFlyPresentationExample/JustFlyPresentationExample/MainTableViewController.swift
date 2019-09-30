@@ -35,7 +35,7 @@ class MainTableViewController: UITableViewController {
                 component.destination = .custom(center: CGPoint(x: view.bounds.width / 2, y: 400))
                 component.presentTransitionType = .translation(origin: .custom(center: CGPoint(x: 0, y: 0)))
             }
-            alertVC.component = component
+            alertVC.presentedViewComponent = component
             presentViewController(alertVC)
         } else if indexPath.section == 1 {
             let alertVC = getAlertVC()
@@ -54,7 +54,7 @@ class MainTableViewController: UITableViewController {
                 component.presentTransitionType = .custom(animation: CrossZoomAnimation(scale: 0.01, options: .spring(duration: 0.5, delay: 0, damping: 0.4, velocity: 10), origin: .center))
                 component.dismissTransitionType = .crossZoom
             }
-            alertVC.component = component
+            alertVC.presentedViewComponent = component
             presentViewController(alertVC)
         } else if indexPath.section == 2 {
             let inputVC = getInputVC()
@@ -72,7 +72,7 @@ class MainTableViewController: UITableViewController {
                 component.keyboardTranslationType = .compressInputView
                 component.keyboardPadding = 60
             }
-            inputVC.component = component
+            inputVC.presentedViewComponent = component
             presentViewController(inputVC)
         }
     }
@@ -80,14 +80,14 @@ class MainTableViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "TranslationCenter" {
             let alertVC = segue.destination as! AlertViewController
-            alertVC.component.destination = .center
-            alertVC.component.presentTransitionType = .translation(origin: .bottomOutOfLine)
+            alertVC.presentedViewComponent.destination = .center
+            alertVC.presentedViewComponent.presentTransitionType = .translation(origin: .bottomOutOfLine)
         } else if segue.identifier == "CrossDissolve" {
             let inputVC = segue.destination as! InputViewController
             var component = PresentedViewComponent(contentSize: CGSize(width: 300, height: 300))
             component.destination = .center
             component.presentTransitionType = .crossDissolve
-            inputVC.component = component
+            inputVC.presentedViewComponent = component
         }
     }
     
